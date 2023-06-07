@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Thống kê{% endblock %}
+
+{% block css %}
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icon Font Stylesheet -->
+<!--
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    -->
+
+<!-- Libraries Stylesheet -->
+<link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+{% block content %}
+<p id="demo"></p>
+<div class="content">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+
+            <div class="col-sm-12">
+                <div class="bg-light rounded">
+                    <label class="mb-4">Ảnh </label>
+                    <div class="frame">
+                        <img src="../media/images/resized_image_0.jpg" width="100vh" height="100vh" alt="">
+                        <img src="../media/images/resized_image_1.jpg" width="100vh" height="100vh" alt="">
+                        <img src="../media/images/resized_image_2.jpg" width="100vh" height="100vh" alt="">
+                        <img src="../media/images/resized_image_3.jpg" width="100vh" height="100vh" alt="">
+                        <img src="../media/images/resized_image_4.jpg" width="100vh" height="100vh" alt="">
+                    </div>
+                    <div class="frame">
+                        <p>0 - No DR</p>
+                        <p>1 - Mild</p>
+                        <p>2 - Moderate</p>
+                        <p>3 - Severe</p>
+                        <p>4 - Proliferative DR</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Single Line Chart</label>
+                    <canvas id="line-chart"></canvas>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Multiple Line Chart</label>
+                    <canvas id="salse-revenue"></canvas>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Multiple Bar Chart</label>
+                    <canvas id="worldwide-sales"></canvas>
+                </div>
+            </div> -->
+
+            <div class="col-sm-12 col-xl-12">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Single Bar Chart</label>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Pie Chart</label>
+                    <canvas id="pie-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <label class="mb-4">Doughnut Chart</label>
+                    <canvas id="doughnut-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block script %}
+<!-- JavaScript Libraries -->
+<!--
+    Phần phản hồi slidebar, .... (bỏ phần này bấm mới được)
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    -->
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/chart/chart.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+
+<!-- Template Javascript -->
+<script src="{% static 'main.js' %}"></script>
+
+{% endblock %}

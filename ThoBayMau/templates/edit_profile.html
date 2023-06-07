@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Thông tin cá nhân{% endblock  %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="page-title">CHỈNH SỬA THÔNG TIN CÁ NHÂN</h4>
+            </div>
+        </div>
+        <form>
+            <div class="card-box">
+                <h3 class="card-title">Thông Tin Cơ Bản</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="profile-img-wrap">
+                            <img class="inline-block" src="{% static 'assets/img/user1.jpg' %}" alt="user">
+                            <div class="fileupload btn">
+                                <span class="btn-text">Cập nhật Avatar</span>
+                                <input class="upload" type="file">
+                            </div>
+                        </div>
+                        <div class="profile-basic">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-focus">
+                                        <label class="focus-label">Họ</label>
+                                        <input type="text" class="form-control floating" value="Trang">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-focus">
+                                        <label class="focus-label">Tên</label>
+                                        <input type="text" class="form-control floating" value="Gia Bảo">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-focus">
+                                        <label class="focus-label">Ngày Sinh</label>
+                                        <div class="cal-icon">
+                                            <input class="form-control floating datetimepicker" type="text" value="05/06/1985">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-focus select-focus">
+                                        <label class="focus-label">Giới Tính</label>
+                                        <select class="select form-control floating">
+                                            <option value="male selected">Nam</option>
+                                            <option value="female">Nữ</option>
+                                            <option value="female">Giới tính khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box">
+                <h3 class="card-title">Thông Tin Liên Hệ</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Địa Chỉ</label>
+                            <input type="text" class="form-control floating" value="4487 Snowbird Lane">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Thành Phố</label>
+                            <input type="text" class="form-control floating" value="Tp. Hồ Chí Minh">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Quốc Gia</label>
+                            <input type="text" class="form-control floating" value="Việt Nam">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Mã Bưu Điện</label>
+                            <input type="text" class="form-control floating" value="10523">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Số điện thoại</label>
+                            <input type="text" class="form-control floating" value="631-889-3206">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box">
+                <h3 class="card-title">Education Informations</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Trường</label>
+                            <input type="text" class="form-control floating" value="Oxford University">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Khoa</label>
+                            <input type="text" class="form-control floating" value="Computer Science">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Thời Gian Nhập Học</label>
+                            <div class="cal-icon">
+                                <input type="text" class="form-control floating datetimepicker" value="01/06/2002">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Thời Gian Kết Thúc</label>
+                            <div class="cal-icon">
+                                <input type="text" class="form-control floating datetimepicker" value="31/05/2006">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Bằng Cấp</label>
+                            <input type="text" class="form-control floating" value="BE Computer Science">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Điểm</label>
+                            <input type="text" class="form-control floating" value="Grade A">
+                        </div>
+                    </div>
+                </div>
+                <div class="add-more">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Institute</a>
+                </div>
+            </div>
+            <div class="card-box">
+                <h3 class="card-title">Kinh Nghiệm Việc Làm</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Tên Công Ty</label>
+                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Địa Điểm Làm Việc</label>
+                            <input type="text" class="form-control floating" value="United States">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Vị Trí</label>
+                            <input type="text" class="form-control floating" value="Web Developer">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Bắt Đầu Từ</label>
+                            <div class="cal-icon">
+                                <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-focus">
+                            <label class="focus-label">Kết Thúc Vào</label>
+                            <div class="cal-icon">
+                                <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-more">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add More Experience</a>
+                </div>
+            </div>
+            <div class="text-center m-t-20">
+                <button class="btn btn-primary submit-btn" type="button">LƯU THÔNG TIN</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock  %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content"> 
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h4 class="page-title">UPLOAD FILES</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2"> 
+                <form method="POST" enctype="multipart/form-data" action="predict">
+                    {% csrf_token %} <!--Thẻ bảo mật web-->                    
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Tải ảnh ở đây</label>
+                            <small class="form-text text-muted">Kích thước ảnh tối đa: 500 MB. Các file ảnh hợp lệ: jpg, gif, png. Tối đa chỉ được tải lên 1 ảnh.</small>  
+                            <input class="form-control" type="file" name='filePath' id="formFile" accept=".jpg, .jpeg, .png, .jfif">
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                
+                                <div class="col-md-3 col-sm-3 col-4 col-lg-3 col-xl-2">
+                                    <div class="product-thumbnail">
+                                        <label> {{filePathName}} </label>
+                                        <img src="{{filePathName}}" class="img-thumbnail img-fluid" alt="">
+                                        {% comment %} <span class="product-remove" title="remove"><i class="fa fa-close"></i></span> {% endcomment %}
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Tải model ở đây</label>
+                            <small class="form-text text-muted">file hợp lệ: h5. Tối đa chỉ được tải lên 1 model.</small>  
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                    </div>
+                    <div class="m-t-30 text-lg-start">
+                        <input type="submit" value="Submit" class="btn btn-primary submit-btn">
+                    </div>
+                    <div class="mb-3">
+                        <p>The prediction is: {{ preds }}</p>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
